@@ -20,6 +20,7 @@ namespace Nancy.AzureFileUpload
             var host = new WebHostBuilder()
                 .UseConfiguration(config)
                 .UseKestrel()
+                .UseUrls("http://*:5001")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();

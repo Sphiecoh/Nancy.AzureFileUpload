@@ -1,4 +1,5 @@
 using System.Linq;
+using Serilog;
 
 namespace Nancy.AzureFileUpload
 {
@@ -12,6 +13,7 @@ namespace Nancy.AzureFileUpload
                    return 400;
                foreach (var file in Request.Files)
                {
+                   Log.Information($"uploading file {file.Name} ({file.Value.Length / 1000} KB)");
                    await storage.UploadAsync(file.Value, file.Name);
                }
                return Response.AsJson(new { message = "uploaded"});

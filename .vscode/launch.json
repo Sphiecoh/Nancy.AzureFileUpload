@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.1\\Nancy.AzureFileUpload.dll",
+            "program": "${workspaceRoot}/src/Nancy.AzureFileUpload/bin/Debug/netcoreapp1.1/Nancy.AzureFileUpload.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
