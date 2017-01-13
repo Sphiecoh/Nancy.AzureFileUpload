@@ -6,7 +6,7 @@ namespace Nancy.AzureFileUpload
 {
     public interface IStorage
     {
-         Task UploadAsync(Stream fileStream,string filename);
+        Task UploadAsync(Stream fileStream, string filename);
         Task<IEnumerable<string>> GetFilesAsync();
     }
 }
